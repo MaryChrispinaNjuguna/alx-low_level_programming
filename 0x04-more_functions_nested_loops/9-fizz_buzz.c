@@ -1,28 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - print a square
- * @size: size of square
- * Description: Can only use _putchar to print. Use '#' to print square.
+ * main - main block, solve fizz buzz from numbers 1 to 100
+ * Description: Multiples of 3, print Fizz. Multiples of 5, print Buzz.
+ * Multiples of both 3 and 5 should print FizzBuzz.
+ * Return: 0
  */
-void print_square(int size)
+int main(void)
 {
-	int x, y;
+	int i;
 
-	y = 0;
-
-	if (size < 1)
-		_putchar('\n');
-
-	while (y < size)
+	i = 1;
+	while (i <= 100)
 	{
-		x = 0;
-		while (x < size)
-		{
-			_putchar('#');
-			x++;
-		}
-		_putchar('\n');
-		y++;
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", i);
+
+		if (i != 100)
+			printf(" ");
+		i++;
 	}
+	printf("\n");
+
+	return (0);
 }

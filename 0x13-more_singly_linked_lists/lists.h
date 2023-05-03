@@ -8,7 +8,9 @@
  * struct_listint_s - singly linked list
  * @n: integer
  * @next: points to the next node
- *
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
  * Description: singly lisnked list node structure
  * for alx project
  */
